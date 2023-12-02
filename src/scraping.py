@@ -8,7 +8,10 @@ from selenium.webdriver.common.by import By
 
 option = Options()
 option.add_argument("--headless")
+option.add_argument("--disable-gpu")
+option.add_argument("--disable-dev-shm-usage")
 driver = webdriver.Chrome(options=option)
+driver.set_window_size(950, 800)
 
 
 def get_hotel_names_and_urls():
