@@ -14,6 +14,7 @@ line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 
 
+# ルーティングの設定、POSTリクエストが来たらcallback関数を返す
 @app.route("/callback", methods=["POST"])
 def callback():
     # get X-Line-Signature header value
@@ -32,6 +33,7 @@ def callback():
     return "OK"
 
 
+# メッセージを受け取った後にどんな処理を行うかを記述
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.reply_message(
