@@ -39,9 +39,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     if event.message.text == "界の予約情報を教えてください":
-        print("分岐入りました")
         reservable_info = get_reservable_info_as_text()
-        print("テキスト化できました")
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reservable_info))
     else:
         line_bot_api.reply_message(
