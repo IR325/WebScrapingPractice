@@ -40,13 +40,11 @@ def callback():
 def handle_message(event):
     if event.message.text == "界の予約情報を教えてください":
         reservable_info = get_reservable_info_as_text()
-        line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text=reservable_info)
-        )
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reservable_info))
     else:
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="何を言っているのかわかりません"),  # 多分eventがユーザのメッセージ送信とかだと思う
+            TextSendMessage(text="何を言っているのかわかりません"),
         )
 
 
