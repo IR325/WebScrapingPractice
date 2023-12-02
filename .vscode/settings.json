@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": ["/Users/ryusuke/anaconda3/envs/auto_edit/lib/python3.11/site-packages"],
+    "editor.rulers": [150], 
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 150
+}
