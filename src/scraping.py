@@ -1,10 +1,6 @@
 import datetime
-import re
 import time
-from urllib.request import Request, urlopen
 
-import pandas as pd
-import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
