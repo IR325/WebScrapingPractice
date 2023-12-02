@@ -36,8 +36,12 @@ def callback():
 # メッセージを受け取った後にどんな処理を行うかを記述
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    # おうむ返し
+    # line_bot_api.reply_message(
+    #     event.reply_token, TextSendMessage(text=event.message.text)
+    # )
     line_bot_api.reply_message(
-        event.reply_token, TextSendMessage(text=event.message.text)
+        event.reply_token, TextSendMessage(text="こんにちは")  # 多分eventがユーザのメッセージ送信とかだと思う
     )
 
 
