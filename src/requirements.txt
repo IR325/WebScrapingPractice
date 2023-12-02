@@ -1,5 +1,5 @@
 Flask==2.2.3
 line-bot-sdk==3.1.0
 Werkzeug==2.3.7
-beautifulsoup4==4.12.4
+beautifulsoup4==4.12.2
 selenium==4.15.2
